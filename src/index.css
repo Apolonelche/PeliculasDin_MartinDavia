@@ -49,6 +49,10 @@
   object-fit: cover;
 }
 
+.interprete:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
 .interprete h2 {
   font-weight: 600;
   font-size: 1.125rem;
