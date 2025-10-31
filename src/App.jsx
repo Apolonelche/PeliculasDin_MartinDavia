@@ -1,6 +1,7 @@
 import './index.css'
 import Contenedor from './Contenedor.jsx'
 import Interprete from "./Interprete.jsx"
+import peliculas from './data/peliculas.js'
 
 
 function App() {
@@ -9,12 +10,19 @@ function App() {
     <>
       <h1 className='contenedor__h1'>Mis Intérpretes</h1>
       <Contenedor>
-        <Interprete nombre="Marlon Brando" foto="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Marlon_Brando_publicity_for_One-Eyed_Jacks.png/270px-Marlon_Brando_publicity_for_One-Eyed_Jacks.png">
-          Marlon Brando fue un influyente actor estadounidense...
-        </Interprete>
-        <Interprete nombre="Al Pacino" foto="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Al_Pacino.jpg/220px-Al_Pacino.jpg">
-          Al Pacino es un actor y director decine estadounidense...
-        </Interprete>
+         {peliculas.filter(pelicula => pelicula.clasificacion === "Drama").map((pelicula) =>  
+        pelicula.actores.map((interprete, index) =>
+          <Interprete 
+            key={index}
+            nombre={interprete.nombre} 
+            foto={interprete.imagen}
+            esNota10={pelicula.nota === 10}
+          >
+            {interprete.biografia}
+          </Interprete>
+        ))
+        }
+      
       </Contenedor>
     </>
   )

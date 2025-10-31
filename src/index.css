@@ -54,13 +54,21 @@
 }
 
 .interprete h2 {
-  font-weight: 600;
-  font-size: 1.125rem;
+  font-weight: var(--texto-font-weight);
+  font-size: var(--texto-font-size);
+  color: var(--negronegro);
+  margin: 1rem 1rem 0.25rem 1rem;
+}
+
+.interprete.nota10 h2 {
+  font-weight: var(--texto-font-weight);
+  font-size: var(--texto-font-size);
+  color: var(--color-red-600);
   margin: 1rem 1rem 0.25rem 1rem;
 }
 
 .interprete p {
-  color: #4b5563;
-  font-size: 0.875rem;
+  color: var(--negronegro);
+  font-size: var(--texto_normal-bold-font-size);
   margin: 0 1rem 1rem 1rem;
 }

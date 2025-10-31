@@ -1,8 +1,8 @@
 function Interprete(props) {
-  const {foto, nombre} = props;
+  const {foto, nombre, esNota10} = props;
   return (
     <>
-      <div className="interprete">
+      <div className={`interprete ${esNota10 ? 'nota10' : ''}`}>
         <img src={foto} alt={nombre} />
         <div>
           <h2>{nombre}</h2>
